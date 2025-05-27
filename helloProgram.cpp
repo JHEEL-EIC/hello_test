@@ -5,9 +5,11 @@
 using namespace std;
 void filterEven(vector<int>&arr)
 {
+	//validation
 	if(arr.empty())
 	{
 		cout<<"vector is empty"<<endl;
+		return;
 	}
 	arr.erase(remove_if(arr.begin(), arr.end(), [](int n){ return n%2 != 0; } ), arr.end());
 }
